@@ -170,26 +170,26 @@ double tprv = 0;
 
 	   if(data2 != '\0' && done2 == false)
 	   {
-	   		if(data2 != '\n' && data2 != '\r')
-	   			d2[s2] = data2;
-	   		else
-	   		{
-	   			done2 = true;
-	   		}
-	   		s2++;
-	   		data2 = '\0';
+		if(data2 != '\n' && data2 != '\r')
+			d2[s2] = data2;
+		else
+		{
+			done2 = true;
+		}
+		s2++;
+		data2 = '\0';
 	   }
 
 	   if(data3 != '\0' && done3 == false)
 	   {
-	   		if(data3 != '\n' && data3 != '\r')
-	   			d3[s3] = data3;
-	   		else
-	   		{
-	   			done3 = true;
-	   		}
-	   		s3++;
-	   		data3 = '\0';
+		if(data3 != '\n' && data3 != '\r')
+			d3[s3] = data3;
+		else
+		{
+			done3 = true;
+		}
+		s3++;
+		data3 = '\0';
 	   }
 
 	   if(done1 && done2 && done3)
@@ -207,42 +207,16 @@ double tprv = 0;
 		   double tdiff2 = diff(temp2, temp3);
 		   double tdiff3 = diff(temp1, temp3);
 
-//		   if(cdiff1 > 0.5 && cdiff2 > 0.5)
-//		   {
-//			   if(tdiff3 < 0.5)
-//				   average = (temp1 + temp3) / 2;
-//			   else
-//				   average = temp1;
-//			   time = time1;
-//		   }
-//		   else if(cdiff2 > 0.5 && cdiff3 > 0.5)
-//		   {
-//			   if(tdiff1 < 0.5)
-//				   average = (temp1 + temp2) / 2;
-//			   else
-//				   average = temp1;
-//			   time = time1;
-//		   }
-//		   else if(cdiff1 > 0.5 && cdiff3 > 0.5)
-//		   {
-//			   if(tdiff2 < 0.5)
-//				   average = (temp3 + temp2) / 2;
-//			   else
-//				   average = temp2;
-//			   time = time2;
-//		   }
-//		   else
-//		   {
-			   if(tdiff1 < 0.5 && tdiff2 < 0.5 && tdiff3 < 0.5)
-				   average = (temp1 + temp2 + temp3) / 3;
-			   else if(tdiff1 < tdiff2 && tdiff1 < tdiff3)
-				   average = (temp1 + temp2) / 2;
-			   else if(tdiff2 < tdiff1 && tdiff2 < tdiff3)
-				   average = (temp2 + temp3) / 2;
-			   else
-				   average = (temp1 + temp3) / 2;
-			   time = time1;
-//		   }
+		   if(tdiff1 < 0.5 && tdiff2 < 0.5 && tdiff3 < 0.5)
+			   average = (temp1 + temp2 + temp3) / 3;
+		   else if(tdiff1 < tdiff2 && tdiff1 < tdiff3)
+			   average = (temp1 + temp2) / 2;
+		   else if(tdiff2 < tdiff1 && tdiff2 < tdiff3)
+			   average = (temp2 + temp3) / 2;
+		   else
+			   average = (temp1 + temp3) / 2;
+		   time = time1;
+		   
 		   if(time != tprv)
 		   {
 			   uart.disp(time);

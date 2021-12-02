@@ -128,10 +128,6 @@ double diff(double f1, double f2)
 		return f2 - f1;
 }
 
-// instantiate switch, led
-//GpoCore led(get_slot_addr(BRIDGE_BASE, S2_LED));
-//GpiCore sw(get_slot_addr(BRIDGE_BASE, S3_SW));
-
 int main() {
 char data1 = '\0';
 char data2 = '\0';
@@ -167,7 +163,6 @@ double tprv = 0;
 		   else
 		   {
 			   done1 = true;
-			   //pmod1.disp("a");
 		   }
 		   s1++;
 		   data1 = '\0';
@@ -180,7 +175,6 @@ double tprv = 0;
 	   		else
 	   		{
 	   			done2 = true;
-	   			//pmod2.disp("a");
 	   		}
 	   		s2++;
 	   		data2 = '\0';
@@ -193,7 +187,6 @@ double tprv = 0;
 	   		else
 	   		{
 	   			done3 = true;
-	   			//pmod3.disp("a");
 	   		}
 	   		s3++;
 	   		data3 = '\0';
@@ -267,19 +260,7 @@ double tprv = 0;
 			   s3 = 0;
 			   tprv = time;
 		   }
-		   //done1 = false;
-		   //done2 = false;
-		   //done3 = false;
-
-		   //sleep_ms(500);
-		   //pmod1.disp("z");
-		   //pmod2.disp("z");
-		   //pmod3.disp("z");
 	   }
-	   //sleep_ms(200);
-	   //pmod1.disp("z");
-	   //pmod2.disp("z");
-	   //pmod3.disp("z");
    } //while
 } //main
 

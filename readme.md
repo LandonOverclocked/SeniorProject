@@ -8,6 +8,7 @@ changes to the code, so I have posted the code I used for the project here.
 To build and run the code, for anyone wanting to recreate this project, you will need the following software:
 
 Xilinx Vivado (I used 2019.2) for the HDL Code
+
 Xilinx Vitis IDE (also 2019.2) for the Drivers and Application Code
 
 To build the HDL Code: Create a new project in Vivado, and from the IP catalog, import a MicroBlaze MCS object (label it cpu), and then
